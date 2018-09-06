@@ -1,0 +1,36 @@
+<div class="container">
+<div class="text-center">
+  <h4 class="dark-grey-text mb-5">
+    <strong *ngIf="this.isNewBook == false">Edit</strong>
+    <strong *ngIf="this.isNewBook == true">Add New Book</strong>
+  </h4>
+</div>
+
+<form [formGroup]="bookEdit">
+  <div class="md-form">
+    <input type="text" id="title" formControlName="title" class="form-control" data-error="This field is required"
+      data-success="" mdbInputDirective>
+    <label for="title">Title</label>
+  </div>
+
+
+
+  <div class="md-form pb-3">
+    <input type="text" id="authors" formControlName="authors" class="form-control" data-error="This field is required"
+      data-success="" mdbInputDirective>
+    <label for="authors">Author</label>
+  </div>
+
+  <div class="md-form pb-3">
+    <input type="text" id="year" formControlName="year" class="form-control" data-error="This field is required"
+      data-success="" placeholder="yyyy-mm-dd, yyyy" mdbInputDirective>
+    <label for="year">year</label>
+  </div>
+
+</form>
+
+<div class="text-center mb-3">
+  <button mat-stroked-button class="btn waves-light" mdbWavesEffect (click)="onSubmit()" [disabled]="!bookEdit.valid">save</button>
+  <button mat-stroked-button color="warn" class="btn waves-light" mdbWavesEffect (click)="close()">cancel</button>
+</div>
+</div>

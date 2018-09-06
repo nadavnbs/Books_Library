@@ -1,0 +1,32 @@
+img {
+  position: absolute;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.book-card {
+  height: 290px;
+  width: 190px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+}
+
+.text {
+  margin: 20px;
+}
+
+.buttons {
+  position: absolute;
+  left: 1px;
+  top: 245px;
+}
+
+.btn.btn-sm {
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+}
+.remove{
+  margin-left: 12px;
+}

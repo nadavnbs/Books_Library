@@ -1,0 +1,14 @@
+<div class="view overlay book-card z-depth-1">
+  <img src="{{book.img}}" class="img-fluid " alt="">
+  <div class="inner-card mask rgba-black-strong ">
+    <div class="text">
+      <p class="white-text text-center font-weight-bold">{{ book.title | titlecase | titleConverter }}</p>
+      <p class="white-text text-center font-italic">{{book.authors }}</p>
+      <p class="white-text text-center">{{ book.year }}</p>
+    </div>
+    <div class="buttons">
+      <button mat-raised-button (click)="openEditDialog()">EDIT</button>
+      <button mat-raised-button color="warn" class="remove" (click)="openRemoveDialog()">REMOVE</button>
+    </div>
+  </div>
+</div>
